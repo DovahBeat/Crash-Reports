@@ -1,0 +1,144 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 6/1/22 8:05 AM
+Description: Mod loading error has occurred
+
+java.lang.Exception: Mod Loading has failed
+	at net.minecraftforge.fml.CrashReportExtender.dumpModLoadingCrashReport(CrashReportExtender.java:85) [?:?] {re:classloading}
+	at net.minecraftforge.fml.client.ClientModLoader.completeModLoading(ClientModLoader.java:188) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.lambda$null$1(Minecraft.java:508) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:flywheel.mixins.json:ShaderCloseMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft$$Lambda$10911/1484114247.run(Unknown Source) [?:?] {}
+	at net.minecraft.util.Util.func_215077_a(Util.java:430) [?:?] {re:classloading,xf:OptiFine:default}
+	at net.minecraft.client.Minecraft.lambda$new$2(Minecraft.java:504) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:flywheel.mixins.json:ShaderCloseMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft$$Lambda$9698/659151312.accept(Unknown Source) [?:?] {}
+	at net.minecraft.client.gui.ResourceLoadProgressGui.func_230430_a_(ResourceLoadProgressGui.java:172) [?:?] {re:classloading,xf:OptiFine:default}
+	at net.minecraft.client.renderer.GameRenderer.func_195458_a(GameRenderer.java:802) [?:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:APP:flywheel.mixins.json:StoreProjectionMatrixMixin,pl:mixin:A}
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:977) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:flywheel.mixins.json:ShaderCloseMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:607) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:flywheel.mixins.json:ShaderCloseMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) [forge-1.16.5-36.2.34.jar:36.2] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$467/819092483.call(Unknown Source) [forge-1.16.5-36.2.34.jar:36.2] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.1.3.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at com.pixelmonmod.pixelmon.Pixelmon.init(Pixelmon.java:181) ~[?:1.16.5-9.0.0] {re:classloading}
+-- MOD pixelmon --
+Details:
+	Mod File: Pixelmon-1.16.5-9.0.0-universal.jar
+	Failure message: Pixelmon Mod (pixelmon) encountered an error during the common_setup event phase
+		java.lang.NullPointerException: null
+	Mod Version: 9.0.0
+	Mod Issue URL: https://pixelmonmod.com/tracker.php?p=2
+	Exception message: java.lang.NullPointerException
+Stacktrace:
+	at com.pixelmonmod.pixelmon.Pixelmon.init(Pixelmon.java:181) ~[?:1.16.5-9.0.0] {re:classloading}
+	at com.pixelmonmod.pixelmon.Pixelmon$$Lambda$6133/2118442767.accept(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.eventbus.EventBus.doCastFilter(EventBus.java:247) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.lambda$addListener$11(EventBus.java:239) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus$$Lambda$2925/567921924.invoke(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.eventbus.EventBus$$Lambda$3281/16477260.invoke(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:120) ~[?:36.2] {re:classloading}
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:121) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.ModContainer$$Lambda$3161/1955846455.run(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1618) ~[?:1.8.0_51] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1610) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1689) ~[?:1.8.0_51] {re:computing_frames}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) ~[?:1.8.0_51] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1039809408 bytes (991 MB) / 2744123392 bytes (2617 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 4
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx4096m -Xms256m
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.34.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/OptiFine_1.16.5_HD_U_G8.jar OptiFine TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.34.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.34
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		forge-1.16.5-36.2.34-client.jar                   |Minecraft                     |minecraft                     |1.16.5              |SIDED_SETU|Manifest: NOSIGNATURE
+		mcw-bridges-2.0.3-mc1.16.5.jar                    |Macaw's Bridges               |mcwbridges                    |2.0.3               |SIDED_SETU|Manifest: NOSIGNATURE
+		BiomesOPlenty-1.16.5-13.1.0.477-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.5-13.1.0.477   |SIDED_SETU|Manifest: NOSIGNATURE
+		ToolStats-1.16.5-6.0.5.jar                        |ToolStats                     |toolstats                     |6.0.5               |SIDED_SETU|Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		treeharvester_1.16.5-5.1.jar                      |Tree Harvester                |treeharvester                 |5.1                 |SIDED_SETU|Manifest: NOSIGNATURE
+		jei-1.16.5-7.7.1.152.jar                          |Just Enough Items             |jei                           |7.7.1.152           |SIDED_SETU|Manifest: NOSIGNATURE
+		cavesandcliffs-1.16.5-7.2.0.jar                   |Caves and Cliffs Backport     |cavesandcliffs                |1.16.5-7.2.0        |SIDED_SETU|Manifest: NOSIGNATURE
+		TrackAPI-1.16.4-forge-1.2.1.jar                   |TrackAPI                      |trackapi                      |1.2                 |SIDED_SETU|Manifest: NOSIGNATURE
+		mcw-windows-2.0.3-mc1.16.5.jar                    |Macaw's Windows               |mcwwindows                    |2.0.3               |SIDED_SETU|Manifest: NOSIGNATURE
+		flywheel-1.16-0.2.5.jar                           |Flywheel                      |flywheel                      |1.16-0.2.5          |SIDED_SETU|Manifest: NOSIGNATURE
+		create-mc1.16.5_v0.3.2g.jar                       |Create                        |create                        |v0.3.2g             |SIDED_SETU|Manifest: NOSIGNATURE
+		Waystones_1.16.5-7.6.4.jar                        |Waystones                     |waystones                     |7.6.4               |SIDED_SETU|Manifest: NOSIGNATURE
+		collective-1.16.5-4.25.jar                        |Collective                    |collective                    |4.25                |SIDED_SETU|Manifest: NOSIGNATURE
+		journeymap-1.16.5-5.8.5p2.jar                     |Journeymap                    |journeymap                    |5.8.5p2             |SIDED_SETU|Manifest: NOSIGNATURE
+		CTM-MC1.16.1-1.1.2.6.jar                          |ConnectedTexturesMod          |ctm                           |MC1.16.1-1.1.2.6    |SIDED_SETU|Manifest: NOSIGNATURE
+		Controlling-7.0.0.28.jar                          |Controlling                   |controlling                   |7.0.0.28            |SIDED_SETU|Manifest: NOSIGNATURE
+		StorageDrawers-1.16.3-8.5.2.jar                   |Storage Drawers               |storagedrawers                |8.5.2               |SIDED_SETU|Manifest: NOSIGNATURE
+		OreExcavation-1.8.157.jar                         |Ore Excavation                |oreexcavation                 |1.8.157             |SIDED_SETU|Manifest: e7:68:1c:0d:b9:7e:cf:f8:f3:40:9c:84:c5:39:d7:a4:59:78:b0:6b:c3:fd:b7:4f:69:18:a3:88:e3:76:8c:3f
+		NaturesCompass-1.16.5-1.9.1-forge.jar             |Nature's Compass              |naturescompass                |1.16.5-1.9.1-forge  |SIDED_SETU|Manifest: NOSIGNATURE
+		decorative_blocks-1.16.4-1.7.2.jar                |Decorative Blocks             |decorative_blocks             |1.7.2               |SIDED_SETU|Manifest: NOSIGNATURE
+		cavebiomeapi-1.16.5-1.4.2.jar                     |CaveBiomeAPI                  |cavebiomeapi                  |1.16.5-1.4.2        |SIDED_SETU|Manifest: NOSIGNATURE
+		mcw-doors-1.0.6-mc1.16.5.jar                      |Macaw's Doors                 |mcwdoors                      |1.0.6               |SIDED_SETU|Manifest: NOSIGNATURE
+		cfm-7.0.0pre22-1.16.3.jar                         |MrCrayfish's Furniture Mod    |cfm                           |7.0.0-pre22         |SIDED_SETU|Manifest: NOSIGNATURE
+		Morpheus-1.16.5-4.2.70.jar                        |Morpheus                      |morpheus                      |4.2.70              |SIDED_SETU|Manifest: NOSIGNATURE
+		ImmersiveRailroading-1.16.5-forge-1.9.1.jar       |Immersive Railroading         |immersiverailroading          |1.16.5-forge-1.9.1  |SIDED_SETU|Manifest: NOSIGNATURE
+		Chisel-MC1.16.5-2.0.1-alpha.4.jar                 |Chisel                        |chisel                        |MC1.16.5-2.0.1-alpha|SIDED_SETU|Manifest: NOSIGNATURE
+		JustEnoughResources-1.16.5-0.12.1.128.jar         |Just Enough Resources         |jeresources                   |0.12.1.128          |SIDED_SETU|Manifest: NOSIGNATURE
+		ImmersivePetroleum-1.16.5-3.3.0-11.jar            |Immersive Petroleum           |immersivepetroleum            |3.3.0-11            |SIDED_SETU|Manifest: NOSIGNATURE
+		ImmersiveEngineering-1.16.5-5.0.7-143.jar         |Immersive Engineering         |immersiveengineering          |1.16.5-5.0.7-143    |SIDED_SETU|Manifest: 44:39:94:cf:1d:8c:be:3c:7f:a9:ee:f4:1e:63:a5:ac:61:f9:c2:87:d5:5b:d9:d6:8c:b5:3e:96:5d:8e:3f:b7
+		forge-1.16.5-36.2.34-universal.jar                |Forge                         |forge                         |36.2.34             |SIDED_SETU|Manifest: 22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		FastLeafDecay-v25.2.jar                           |FastLeafDecay                 |fastleafdecay                 |v25.2               |SIDED_SETU|Manifest: NOSIGNATURE
+		chiselsandbits-1.0.63.jar                         |Chisels & bits                |chiselsandbits                |1.0.63              |SIDED_SETU|Manifest: NOSIGNATURE
+		UniversalModCore-1.16.5-forge-1.1.3.jar           |Universal Mod Core            |universalmodcore              |1.1.3               |SIDED_SETU|Manifest: NOSIGNATURE
+		Pixelmon-1.16.5-9.0.0-universal.jar               |Pixelmon Mod                  |pixelmon                      |9.0.0               |ERROR     |Manifest: NOSIGNATURE
+	Crash Report UUID: 4b6c533a-36e2-4fd6-9f08-c4a762595971
+	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+	OptiFine Build: 20210515-161946
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 512.95
+	OpenGlRenderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 4
